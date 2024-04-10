@@ -5,4 +5,6 @@ from squadlife import views
 
 urlpatterns = [
     path('', views.home),
+    path('gallery', views.gal),
+    path('contact', views.contact),
 ]
