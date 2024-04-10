@@ -1,6 +1,83 @@
 {% extends "base.htm" %}
-
+{% load static %}
 {% block body %}
+
+
+
+<div class="main-item-box" >
+    <div class="main-left-item">
+<h1>World’s Largest Health Travel Platform</h1>
+<p class="tag-line">Find the best doctors across the world. 
+
+<!-- bstrap  -->
+
+  <div class="mb-3">
+  
+   <input type="text" placeholder="search the disease surgeons or hospitals" class="form-control fs-4 w-4 input-sm" id="exampleInputEmail1" aria-describedby="emailHelp">
+
+   </div>
+<!-- bstrap end -->
+
+<div class="inside-item">
+ 
+Treatments for Neuro & Spine, IVF & Gyne, Cardiac, Urology, Gastro, Transplants and more
+    <div class="treatments-ex"><p></p></div>
+</div>
+<div class="countries">
+        <div class="bandladesh country">
+            <img src="{% static '/img/bangla.png' %}" alt="">
+            <p class="name-country" style="visibility: hidden;">Bangladesh</p>
+
+        </div>
+        <div class="kazakistan country">
+            <img src="{% static '/img/kazakistan.png' %}" alt="">
+            <p  class="name-country" style="visibility: hidden;">kazakistan</p>
+
+        </div>
+</div>
+
+
+<div class="countries">
+        <div class="bandladesh country">
+            <img src="{% static '/img/india.png' %}" alt="">
+            <p class="name-country" style="visibility: hidden;">Bangladesh</p>
+            {% comment %} <p class="name-country" >India</p> {% endcomment %}
+
+        </div>
+        <div class="kazakistan country">
+            <img src="{% static '/img/Russia.jpg' %}" alt="">
+            <p  class="name-country" style="visibility: hidden;">kazakistan</p>
+
+        </div>
+</div>
+
+
+</div>
+    <div class="right-items">
+     <div class="line-one cont lines-conts">
+        <div class="cont-item">
+<p>5000+</p>
+<h5>Patient served</h5>
+     </div>
+     <div class="img-cont"><img src="{% static '/img/cont-img1.jpg' %}" alt=""></div></div>
+     <div class="line-two cont lines-conts"><div class="img-cont img-cont-2"><img src="{% static '/img/contimg-2.jpg' %}" alt=""></div></div>
+     <div class="line-three cont lines-conts">
+        <div class="cont-item">
+<p>10+ </p>
+<h5>Countries reached</h5>
+     </div>
+     <div class="img-cont"><img src="{% static '/img/cont-img-3.jpg' %}" alt=""></div></div>
+    </div>
+    
+</div>
+<!-- body 1st end         -->
+
+
+
+
+
+
+
 
 <section class="text-gray-600 body-font">
   <div class="container px-5 py-24 mx-auto flex flex-wrap">
@@ -487,4 +564,220 @@
     </div>
   </section>
 </div>
+
+
+
+
+
+
+
+<style>
+
+.main-item-box{
+    background-color: #def4f5;
+    width: 85%;
+    overflow-x: hidden;
+    min-height: 60vh;
+   display: flex;
+  /* height: 30rem; */
+   justify-content: space-between;
+   margin: auto;
+   border-radius: 2rem;
+}
+.main-left-item{  
+    padding: 2rem;
+}
+.countries{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    margin-top: 2rem;
+    
+}
+.country img{
+border-radius: 10rem;
+height: 3rem;
+width: 3rem;
+margin-left: -4rem;
+}
+.country{
+    margin-right:  2rem;
+    text-align: center;
+}
+
+.name-country {
+    text-align: center;
+
+    font-size: 1.4rem;
+margin-left: -5rem;
+}
+.main-left-item h1{
+    width: 100%;
+    font-size: 4.2rem;
+    margin-top: 3rem;
+}
+.tag-line {
+    font-size: 2rem;
+    padding-top: 2rem;
+}
+.main-left-item input{
+padding: 1.7rem ;
+border-radius: .6rem;
+margin-top: 2rem;
+border: none;
+outline: none;
+overflow: a;
+}
+.inside-item{
+    display: flex;
+    margin-top: 5rem;
+}
+.inside-item a{
+    background-color: rgb(23, 77, 255);
+    color: white;
+    padding: 2rem 5rem;
+    font-size: 1.5rem;
+    border-radius: 1rem;
+}
+.treatments-ex p{
+    font-size: 1.5rem;
+    padding-left: 2rem;
+    /* padding-top: 2rem; */
+    /* align-items: center; */
+    margin-top: -3rem;
+    width: 65%;
+    
+}
+.main-left-item input:focus{
+border: none;
+    outline: none;
+}
+
+.cont-item{
+    width: 20rem;
+    border-radius: 1.5rem;
+    height: 15rem;
+    background-color: #def4f5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: 
+    center;
+    
+    
+}
+.cont-item h5{
+    font-size: 2rem
+}
+.cont-item p{
+    font-size: 2.5rem;
+}
+.lines-conts{
+    display: flex;
+
+    padding: 1rem;
+    justify-content: space-between;
+}
+.img-cont img{
+    margin:0rem 2rem;
+    width: 25rem;
+    border-radius: 1.5rem;
+    height: 15rem;
+    
+}
+.line-two{
+    display: flex;
+    justify-content: center;
+}
+.img-cont-2 img {
+    
+    width: 25rem;
+    height: 15rem;
+}
+
+@media(max-width:1250px) {
+    html {
+        font-size: 50%;
+    }
+
+    .main-left-item h1 {
+
+        width: 100%;
+    }
+}
+@media(max-width:991px) {
+    html {
+        font-size: 46%;
+    }
+
+    .main-left-item h1 {
+
+        width: 100%;
+    }
+        .main-left-item input {
+            padding: 1.7rem 10rem;
+        }
+        .treatments-ex p{
+            width: 100%;
+        }
+}
+
+@media (max-width:767px){
+    html{
+      font-size: 45%;
+        text-align: center;
+    }
+   
+ .main-left-item h1 {
+
+     width: 100%;
+ }
+    .right-items{
+        display: none;
+    }
+ 
+    .main-left-item input{
+        padding: 1.7rem 10rem;
+    }
+    .inside-item{
+        flex-direction: column;
+    }
+    .treatments-ex p{
+        margin-top: 4rem;
+        width: 100%;
+
+    }
+}
+@media(max-width:575px){
+    html{
+        font-size: 40%;
+    }
+}
+ .main-left-item h1 {
+
+     width: 100%;
+ }
+@media(max-width:427px){
+    html{
+        font-size: 43%;
+ 
+    }
+          .main-left-item input {
+              padding: 1.7rem 5rem;
+          }
+    
+          
+        
+}
+@media(max-width:375px){
+    html{
+        font-size: 35%;
+    }
+         
+}
+
+
+</style>
+
+
 {% endblock body %}
